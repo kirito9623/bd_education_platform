@@ -28,9 +28,3 @@ La base de datos incluye las siguientes tablas principales:
 - `evaluaciones`: registra las evaluaciones y notas de los estudiantes.
 
 ![Diagrama ER](./BD_OLTP/diagrama.jpg) 
-
-## Instalación
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/kirito9623/bd_education_platform.git

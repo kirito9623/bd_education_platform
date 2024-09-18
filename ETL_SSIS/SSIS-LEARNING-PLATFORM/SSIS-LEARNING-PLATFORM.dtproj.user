@@ -8,6 +8,8 @@
         <UseWinAuth>false</UseWinAuth>
         <WinAuthUserName />
         <WinAuthDomain />
+        <ServerName>Petunia\MSSQLSERVERDEV</ServerName>
+        <PathOnServer>/SSISDB/SISS-LEARNING-PLATFORM/SISS-LEARNING-PLATFORM</PathOnServer>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>

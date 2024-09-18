@@ -11,11 +11,47 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="60"
-  DTS:VersionGUID="{A3C54956-7B63-46D2-AD5B-1721410214B0}">
+  DTS:VersionBuild="74"
+  DTS:VersionGUID="{68E654A9-5372-4E46-8372-C0D45BA80181}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{607E6235-F568-48AB-BF3A-ACA61968A296}"
+      DTS:ObjectName="Petunia\MSSQLSERVERDEV.learning_platform">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=Petunia\MSSQLSERVERDEV;Initial Catalog=learning_platform;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{607E6235-F568-48AB-BF3A-ACA61968A296}Petunia\MSSQLSERVERDEV.learning_platform;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{44263908-53A8-4919-AFBC-1AC4162FD0A7}"
+      DTS:ObjectName="Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=Petunia\MSSQLSERVERDEV;Initial Catalog=sin_learning_platform_datawarehouse;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{44263908-53A8-4919-AFBC-1AC4162FD0A7}Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B86BB59E-D31A-4733-B355-161A25A92DE7}"
+      DTS:ObjectName="Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=Petunia\MSSQLSERVERDEV;Initial Catalog=sin_learning_platform_datawarehouse;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{B86BB59E-D31A-4733-B355-161A25A92DE7}Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
       DTS:CreationName="OLEDB"
@@ -126,8 +162,8 @@
               <connections>
                 <connection
                   refId="Package\Poblar Dimensiones\Destino ACTIVIDAD.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Petunia\SQLEXPRESS.sin_learning_platform_datawarehouse]"
-                  connectionManagerRefId="Package.ConnectionManagers[Petunia\SQLEXPRESS.sin_learning_platform_datawarehouse]"
+                  connectionManagerID="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -245,8 +281,8 @@
               <connections>
                 <connection
                   refId="Package\Poblar Dimensiones\Destino Curso.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Petunia\SQLEXPRESS.sin_learning_platform_datawarehouse]"
-                  connectionManagerRefId="Package.ConnectionManagers[Petunia\SQLEXPRESS.sin_learning_platform_datawarehouse]"
+                  connectionManagerID="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -376,8 +412,8 @@
               <connections>
                 <connection
                   refId="Package\Poblar Dimensiones\Destino DIM TIEMPO.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Petunia\SQLEXPRESS.sin_learning_platform_datawarehouse]"
-                  connectionManagerRefId="Package.ConnectionManagers[Petunia\SQLEXPRESS.sin_learning_platform_datawarehouse]"
+                  connectionManagerID="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -527,8 +563,8 @@
               <connections>
                 <connection
                   refId="Package\Poblar Dimensiones\Destino ESTUDIANTE.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Petunia\SQLEXPRESS.sin_learning_platform_datawarehouse]"
-                  connectionManagerRefId="Package.ConnectionManagers[Petunia\SQLEXPRESS.sin_learning_platform_datawarehouse]"
+                  connectionManagerID="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -548,12 +584,12 @@
                       externalMetadataColumnId="Package\Poblar Dimensiones\Destino ESTUDIANTE.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nombre]"
                       lineageId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de origen de OLE DB].Columns[Nombre]" />
                     <inputColumn
-                      refId="Package\Poblar Dimensiones\Destino ESTUDIANTE.Inputs[Entrada de destino de OLE DB].Columns[mail]"
+                      refId="Package\Poblar Dimensiones\Destino ESTUDIANTE.Inputs[Entrada de destino de OLE DB].Columns[Mail]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="mail"
+                      cachedName="Mail"
                       externalMetadataColumnId="Package\Poblar Dimensiones\Destino ESTUDIANTE.Inputs[Entrada de destino de OLE DB].ExternalColumns[Direccion]"
-                      lineageId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de origen de OLE DB].Columns[mail]" />
+                      lineageId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de origen de OLE DB].Columns[Mail]" />
                     <inputColumn
                       refId="Package\Poblar Dimensiones\Destino ESTUDIANTE.Inputs[Entrada de destino de OLE DB].Columns[Rol]"
                       cachedDataType="wstr"
@@ -662,8 +698,8 @@
               <connections>
                 <connection
                   refId="Package\Poblar Dimensiones\Origen ACTIVIDAD.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
-                  connectionManagerRefId="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
+                  connectionManagerID="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
+                  connectionManagerRefId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -789,8 +825,8 @@
               <connections>
                 <connection
                   refId="Package\Poblar Dimensiones\Origen Curso.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
-                  connectionManagerRefId="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
+                  connectionManagerID="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
+                  connectionManagerRefId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -937,8 +973,8 @@
               <connections>
                 <connection
                   refId="Package\Poblar Dimensiones\Origen DIM TIEMPO.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
-                  connectionManagerRefId="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
+                  connectionManagerID="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
+                  connectionManagerRefId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -1097,8 +1133,8 @@
               <connections>
                 <connection
                   refId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
-                  connectionManagerRefId="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
+                  connectionManagerID="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
+                  connectionManagerRefId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -1127,16 +1163,6 @@
                       name="Nombre"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de origen de OLE DB].Columns[mail]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de origen de OLE DB].ExternalColumns[mail]"
-                      length="255"
-                      lineageId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de origen de OLE DB].Columns[mail]"
-                      name="mail"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de origen de OLE DB].Columns[Rol]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
@@ -1145,6 +1171,16 @@
                       length="255"
                       lineageId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de origen de OLE DB].Columns[Rol]"
                       name="Rol"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de origen de OLE DB].Columns[Mail]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de origen de OLE DB].ExternalColumns[Mail]"
+                      length="255"
+                      lineageId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de origen de OLE DB].Columns[Mail]"
+                      name="Mail"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -1159,15 +1195,15 @@
                       length="255"
                       name="Nombre" />
                     <externalMetadataColumn
-                      refId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de origen de OLE DB].ExternalColumns[mail]"
-                      dataType="wstr"
-                      length="255"
-                      name="mail" />
-                    <externalMetadataColumn
                       refId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de origen de OLE DB].ExternalColumns[Rol]"
                       dataType="wstr"
                       length="255"
                       name="Rol" />
+                    <externalMetadataColumn
+                      refId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de origen de OLE DB].ExternalColumns[Mail]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mail" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1187,11 +1223,11 @@
                       lineageId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de error de origen de OLE DB].Columns[Nombre]"
                       name="Nombre" />
                     <outputColumn
-                      refId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de error de origen de OLE DB].Columns[mail]"
+                      refId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de error de origen de OLE DB].Columns[Mail]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de error de origen de OLE DB].Columns[mail]"
-                      name="mail" />
+                      lineageId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de error de origen de OLE DB].Columns[Mail]"
+                      name="Mail" />
                     <outputColumn
                       refId="Package\Poblar Dimensiones\Origen ESTUDIANTE.Outputs[Salida de error de origen de OLE DB].Columns[Rol]"
                       dataType="wstr"
@@ -2217,8 +2253,8 @@
               <connections>
                 <connection
                   refId="Package\Poblar Tabla Hechos\Destino de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
-                  connectionManagerRefId="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
+                  connectionManagerID="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
+                  connectionManagerRefId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -2403,8 +2439,8 @@
               <connections>
                 <connection
                   refId="Package\Poblar Tabla Hechos\DIM ACTIVIDAD.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
-                  connectionManagerRefId="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
+                  connectionManagerID="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
+                  connectionManagerRefId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -2530,8 +2566,8 @@
               <connections>
                 <connection
                   refId="Package\Poblar Tabla Hechos\DIM CURSO.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
-                  connectionManagerRefId="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
+                  connectionManagerID="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
+                  connectionManagerRefId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -2678,8 +2714,8 @@
               <connections>
                 <connection
                   refId="Package\Poblar Tabla Hechos\Dim Estudiante.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
-                  connectionManagerRefId="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
+                  connectionManagerID="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
+                  connectionManagerRefId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -2708,16 +2744,6 @@
                       name="Nombre"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].Columns[mail]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].ExternalColumns[mail]"
-                      length="255"
-                      lineageId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].Columns[mail]"
-                      name="mail"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].Columns[Rol]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
@@ -2726,6 +2752,16 @@
                       length="255"
                       lineageId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].Columns[Rol]"
                       name="Rol"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].Columns[Mail]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].ExternalColumns[Mail]"
+                      length="255"
+                      lineageId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].Columns[Mail]"
+                      name="Mail"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -2740,15 +2776,15 @@
                       length="255"
                       name="Nombre" />
                     <externalMetadataColumn
-                      refId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].ExternalColumns[mail]"
-                      dataType="wstr"
-                      length="255"
-                      name="mail" />
-                    <externalMetadataColumn
                       refId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].ExternalColumns[Rol]"
                       dataType="wstr"
                       length="255"
                       name="Rol" />
+                    <externalMetadataColumn
+                      refId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].ExternalColumns[Mail]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mail" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2768,11 +2804,11 @@
                       lineageId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de error de origen de OLE DB].Columns[Nombre]"
                       name="Nombre" />
                     <outputColumn
-                      refId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de error de origen de OLE DB].Columns[mail]"
+                      refId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de error de origen de OLE DB].Columns[Mail]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de error de origen de OLE DB].Columns[mail]"
-                      name="mail" />
+                      lineageId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de error de origen de OLE DB].Columns[Mail]"
+                      name="Mail" />
                     <outputColumn
                       refId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de error de origen de OLE DB].Columns[Rol]"
                       dataType="wstr"
@@ -3666,11 +3702,11 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Poblar Tabla Hechos\Ordenar 3.Inputs[Entrada de ordenación].Columns[mail]"
+                      refId="Package\Poblar Tabla Hechos\Ordenar 3.Inputs[Entrada de ordenación].Columns[Mail]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="mail"
-                      lineageId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].Columns[mail]">
+                      cachedName="Mail"
+                      lineageId="Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].Columns[Mail]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3738,17 +3774,17 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Poblar Tabla Hechos\Ordenar 3.Outputs[Salida de ordenación].Columns[mail]"
+                      refId="Package\Poblar Tabla Hechos\Ordenar 3.Outputs[Salida de ordenación].Columns[Mail]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Poblar Tabla Hechos\Ordenar 3.Outputs[Salida de ordenación].Columns[mail]"
-                      name="mail">
+                      lineageId="Package\Poblar Tabla Hechos\Ordenar 3.Outputs[Salida de ordenación].Columns[Mail]"
+                      name="Mail">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
-                          name="SortColumnId">#{Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].Columns[mail]}</property>
+                          name="SortColumnId">#{Package\Poblar Tabla Hechos\Dim Estudiante.Outputs[Salida de origen de OLE DB].Columns[Mail]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4652,8 +4688,8 @@
               <connections>
                 <connection
                   refId="Package\Poblar Tabla Hechos\Origen de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
-                  connectionManagerRefId="Package.ConnectionManagers[Petunia\SQLEXPRESS.learning_platform]"
+                  connectionManagerID="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
+                  connectionManagerRefId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.learning_platform]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -4902,8 +4938,8 @@
               <connections>
                 <connection
                   refId="Package\Poblar Tabla Hechos\Origen DIM TIEMPO.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Petunia\SQLEXPRESS.sin_learning_platform_datawarehouse]"
-                  connectionManagerRefId="Package.ConnectionManagers[Petunia\SQLEXPRESS.sin_learning_platform_datawarehouse]"
+                  connectionManagerID="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[Petunia\MSSQLSERVERDEV.sin_learning_platform_datawarehouse]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -5151,9 +5187,8 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{6D70A60B-C1C8-49C3-BCAB-DDF0FC93EFDC}"
-          SQLTask:SqlStmtSourceType="FileConnection"
-          SQLTask:SqlStatementSource="REINICIAR TABLAS.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{B86BB59E-D31A-4733-B355-161A25A92DE7}"
+          SQLTask:SqlStatementSource="DELETE FROM Tabla_de_Hechos_de_Actividad;&#xA;DBCC CHECKIDENT('Tabla_de_Hechos_de_Actividad', RESEED, 0);&#xA;&#xA;DELETE FROM Dimension_Actividad;&#xA;DBCC CHECKIDENT('Dimension_Actividad', RESEED, 0);&#xA;&#xA;DELETE FROM Dimension_Curso;&#xA;DBCC CHECKIDENT('Dimension_Curso', RESEED, 0);&#xA;&#xA;DELETE FROM Dimension_Estudiante;&#xA;DBCC CHECKIDENT('Dimension_Estudiante', RESEED, 0);&#xA;&#xA;DELETE FROM Dimension_Tiempo;&#xA;DBCC CHECKIDENT('Dimension_Tiempo', RESEED, 0);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -5190,29 +5225,29 @@
         <NodeLayout
           Size="194,54"
           Id="Package\Poblar Dimensiones"
-          TopLeft="219.166666666667,220.166666666667" />
+          TopLeft="199.166666666667,210.833333333334" />
         <NodeLayout
           Size="175,42"
           Id="Package\Poblar Tabla Hechos"
-          TopLeft="234,332" />
+          TopLeft="216,329.333333333333" />
         <NodeLayout
-          Size="193,68"
+          Size="153,42"
           Id="Package\Reiniciar Tablas"
-          TopLeft="222.5,103.5" />
+          TopLeft="213.166666666667,102.833333333333" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="317.583333333333,171.5">
+          TopLeft="292.916666666667,144.833333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48.6666666666667"
+              EndConnector="0,66.0000000000003"
               Start="0,0"
-              End="0,41.1666666666667">
+              End="0,58.5000000000003">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.1666666666667" />
+                    End="0,58.5000000000003" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5223,18 +5258,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
-          TopLeft="318.833333333333,274.166666666667">
+          TopLeft="299.833333333333,264.833333333334">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,57.8333333333334"
+              EndConnector="0,64.4999999999997"
               Start="0,0"
-              End="0,50.3333333333334">
+              End="0,56.9999999999997">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.3333333333334" />
+                    End="0,56.9999999999997" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

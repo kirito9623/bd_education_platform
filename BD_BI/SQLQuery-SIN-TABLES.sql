@@ -1,5 +1,9 @@
+--Database Creation
+CREATE DATABASE sin_learning_platform_datawarehouse
+Go
+
 USE sin_learning_platform_datawarehouse
-GO
+
 
 CREATE TABLE Dimension_Tiempo (
     FechaID int PRIMARY KEY IDENTITY(1,1) NOT NULL,
@@ -8,6 +12,12 @@ CREATE TABLE Dimension_Tiempo (
     Trimestre int NOT NULL,
     Año int NOT NULL
 );
+
+ALTER TABLE Dimension_Tiempo
+ADD Fecha DATETIME NOT NULL DEFAULT GETDATE();
+
+SELECT * FROM Dimension_Tiempo
+
 
 CREATE TABLE Dimension_Estudiante (
     EstudianteID int PRIMARY KEY IDENTITY(1,1) NOT NULL,
@@ -23,10 +33,26 @@ CREATE TABLE Dimension_Curso (
     Nivel int NOT NULL
 );
 
+ALTER TABLE Dimension_Curso
+DROP COLUMN Nivel;
+
+ALTER TABLE Dimension_Curso
+ADD descripcion NVARCHAR(255);
+
+ALTER TABLE Dimension_Curso
+DROP COLUMN Categoria;
+
+SELECT * FROM Dimension_Curso
+
+
+
 CREATE TABLE Dimension_Actividad (
     TipoActividad int PRIMARY KEY IDENTITY(1,1) NOT NULL,
     NombreActividad nvarchar(255) NOT NULL
 );
+
+
+
 
 CREATE TABLE Tabla_de_Hechos_de_Actividad (
     ActividadID int PRIMARY KEY IDENTITY(1,1) NOT NULL,
@@ -44,3 +70,5 @@ CREATE TABLE Tabla_de_Hechos_de_Actividad (
     CONSTRAINT FK_Hechos_Curso FOREIGN KEY (CursoID) REFERENCES Dimension_Curso(CursoID),
     CONSTRAINT FK_Hechos_Actividad FOREIGN KEY (TipoActividad) REFERENCES Dimension_Actividad(TipoActividad)
 );
+
+

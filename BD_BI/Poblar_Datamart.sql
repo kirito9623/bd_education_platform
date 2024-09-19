@@ -13,7 +13,6 @@ FROM Enrollments;
 
 
 SELECT * FROM VW_DIMENSION_TIEMPO;
-
 SELECT COUNT(*) AS TotalFilas FROM Enrollments;
 
 
@@ -22,14 +21,15 @@ SELECT COUNT(*) AS TotalFilas FROM Enrollments;
 CREATE VIEW VW_DIMENSION_ESTUDIANTE AS
 SELECT DISTINCT
     UserID AS EstudianteID,
-    Name AS Nombre,
-    Email AS mail,  -- Suponiendo que la dirección no está disponible en USERS
-    Role AS Rol
+    CAST(Name AS NVARCHAR(255)) AS Nombre,
+    CAST(Email AS NVARCHAR(255)) AS Mail,
+    CAST(Role AS NVARCHAR(255)) AS Rol
 FROM USERS;
+
 
 SELECT * FROM VW_DIMENSION_ESTUDIANTE;
 
-DROP VIEW IF EXISTS VW_DIMENSION_CURSO;
+DROP VIEW VW_DIMENSION_ESTUDIANTE
 
 
 
@@ -37,20 +37,12 @@ CREATE VIEW VW_DIMENSION_CURSO AS
 SELECT DISTINCT
     CourseID AS CursoID,
     Title AS Nombre,
-    Description AS Descripcion, 
-    'Tecnología' AS Categoria 
+    Description AS Descripcion
 FROM Courses;
 
+DROP VIEW VW_DIMENSION_CURSO
+
 SELECT * FROM VW_DIMENSION_CURSO;
-
-
-
-CREATE VIEW VW_DIMENSION_ACTIVIDAD AS
-SELECT DISTINCT
-    ActivityID AS TipoActividad,
-    ActivityName AS NombreActividad
-FROM Activities;  -- Suponiendo que tienes una tabla "Activities" que almacena los tipos de actividad
-
 
 
 
@@ -58,32 +50,36 @@ FROM Activities;  -- Suponiendo que tienes una tabla "Activities" que almacena l
 CREATE VIEW VW_DIMENSION_ACTIVIDAD AS
 SELECT DISTINCT
     1 AS ActivityID,
-    'Lección Completada' AS NombreActividad
+    CAST('Lección Completada' AS NVARCHAR(255)) AS NombreActividad
 FROM Lessons
 UNION ALL
 SELECT DISTINCT
     2 AS ActivityID,
-    'Proyecto Guiado Completado' AS NombreActividad
+    CAST('Proyecto Guiado Completado' AS NVARCHAR(255)) AS NombreActividad
 FROM GuidedProjects
 UNION ALL
 SELECT DISTINCT
     3 AS ActivityID,
-    'Certificado Emitido' AS NombreActividad
+    CAST('Certificado Emitido' AS NVARCHAR(255)) AS NombreActividad
 FROM Certificates
 UNION ALL
 SELECT DISTINCT
     4 AS ActivityID,
-    'Progreso en Lección' AS NombreActividad
+    CAST('Progreso en Lección' AS NVARCHAR(255)) AS NombreActividad
 FROM Progress;
 
-
 SELECT * FROM VW_DIMENSION_ACTIVIDAD;
+DROP VIEW VW_DIMENSION_ACTIVIDAD;
+
+
+
 
 
 --TABLA HECHOS DE ACTIVIDAD
+
 CREATE VIEW VW_TABLA_DE_HECHOS_DE_ACTIVIDAD AS
 SELECT 
-    CAST(E.EnrollmentDate AS datetime) AS Fecha,
+    CAST(E.EnrollmentDate AS int) AS Fecha,
     E.UserID AS EstudianteID,
     C.CourseID AS CursoID,
     1 AS TipoActividad,  -- Lección Completada
@@ -131,5 +127,6 @@ FROM Certificates Cert;
 SELECT * FROM VW_TABLA_DE_HECHOS_DE_ACTIVIDAD;
 
 
+DROP VIEW  VW_TABLA_DE_HECHOS_DE_ACTIVIDAD;
 
-DROP VIEW IF EXISTS VW_TABLA_DE_HECHOS_DE_ACTIVIDAD;
+SELECT @@VERSION;

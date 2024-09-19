@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "SSAS_EDUCATION-PLATFORM", "SSAS_EDUCATION-PLATFORM.dwproj", "{0E3A1393-C36C-4F86-A927-3DA70BC91548}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E3A1393-C36C-4F86-A927-3DA70BC91548}.Development|Default.ActiveCfg = Development
+		{0E3A1393-C36C-4F86-A927-3DA70BC91548}.Development|Default.Build.0 = Development
+		{0E3A1393-C36C-4F86-A927-3DA70BC91548}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45D17E9C-E729-4845-83F1-B53F945765AE}
+	EndGlobalSection
+EndGlobal
